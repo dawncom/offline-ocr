@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Screen OCR",
+  "version": "4.2.0",
+  "description": "PP-OCRv6 tiny screen area OCR",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "commands": {
+    "select": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Z"
+      },
+      "description": "\u6846\u9009\u8bc6\u522b"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}
